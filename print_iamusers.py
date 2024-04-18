@@ -4,8 +4,3 @@ iam_console = aws_console.resource("iam")
 #using resource 
 for user in iam_console.users.all():
    print(user.user_name)
-
-
-#using client object
-for user in iam_console.list_users()['Users']:
-  print(user['UserName'])
